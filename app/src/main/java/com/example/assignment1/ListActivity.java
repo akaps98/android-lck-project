@@ -29,7 +29,6 @@ public class ListActivity extends AppCompatActivity {
         ListView listView = findViewById(R.id.listView);
         adapter = new ListTeamAdapter();
 
-        //List<Team> teams = new ArrayList<>();
         adapter.addTeam(new Team("KT Rolster", "2012", "kt_logo.png"));
         adapter.addTeam(new Team("T1", "2013", "kt_logo.png"));
         adapter.addTeam(new Team("Gen.G", "2013", "kt_logo.png"));
@@ -42,8 +41,5 @@ public class ListActivity extends AppCompatActivity {
         adapter.addTeam(new Team("Nongshim RedForce", "2020", "kt_logo.png"));
 
         listView.setAdapter(adapter);
-
-//        ArrayAdapter<Team> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, teams);
-//        listView.setAdapter(adapter);
     }
 }
