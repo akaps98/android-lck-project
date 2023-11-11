@@ -22,7 +22,7 @@ public class ListTeamAdapter extends BaseAdapter {
     }
 
     @Override
-    public Object getItem(int position) {
+    public Team getItem(int position) {
         return teams.get(position);
     }
 
@@ -47,7 +47,7 @@ public class ListTeamAdapter extends BaseAdapter {
 
         name.setText(team.name);
         since.setText(team.since);
-        logo.setImageResource(R.drawable.kt_logo);
+        logo.setImageResource(team.logo);
 
         return convertView;
     }

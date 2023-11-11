@@ -1,14 +1,23 @@
 package com.example.assignment1.model;
 
-public class Team {
+import java.io.Serializable;
+import java.util.Dictionary;
+import java.util.HashMap;
+
+public class Team implements Serializable {
     String name;
     String since;
-    String logo;
+    int logo;
+    int players_pic;
+    HashMap<String, String> players;
 
-    public Team(String name, String since, String logo) {
+    public Team(){}
+    public Team(String name, String since, int logo, int players_pic, HashMap<String, String> players) {
         this.name = name;
         this.since = since;
         this.logo = logo;
+        this.players_pic = players_pic;
+        this.players = players;
     }
 
     public String getName() {
@@ -27,11 +36,27 @@ public class Team {
         this.since = since;
     }
 
-    public String getLogo() {
+    public int getLogo() {
         return logo;
     }
 
-    public void setLogo(String logo) {
+    public void setLogo(int logo) {
         this.logo = logo;
+    }
+
+    public int getPlayers_pic() {
+        return players_pic;
+    }
+
+    public void setPlayers_pic(int players_pic) {
+        this.players_pic = players_pic;
+    }
+
+    public HashMap<String, String> getPlayers() {
+        return players;
+    }
+
+    public void setPlayers(HashMap<String, String> players) {
+        this.players = players;
     }
 }
