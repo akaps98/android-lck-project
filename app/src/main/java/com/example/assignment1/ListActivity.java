@@ -32,6 +32,8 @@ public class ListActivity extends AppCompatActivity {
         ListView listView = findViewById(R.id.listView);
         adapter = new ListTeamAdapter();
 
+        // generate hashmap which contains players position and nickname
+
         HashMap<String, String> kt_players = new HashMap<>();
         kt_players.put("top", "Kiin");
         kt_players.put("jug", "Cuzz");
@@ -102,7 +104,7 @@ public class ListActivity extends AppCompatActivity {
         nongshim_players.put("adc", "vital");
         nongshim_players.put("sup", "Peter");
 
-
+        // create 10 teams on LCK then put them into adapter
         adapter.addTeam(new Team("KT Rolster", "2012", R.drawable.kt_logo, R.drawable.kt_members, kt_players));
         adapter.addTeam(new Team("T1", "2013", R.drawable.t1_logo, R.drawable.t1_members, t1_players));
         adapter.addTeam(new Team("Gen.G", "2013", R.drawable.geng_logo, R.drawable.geng_members, geng_players));
@@ -119,12 +121,10 @@ public class ListActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //Team team = (Team) adapter.getItem(position);
-//                team = new Team("DRX", "2012", R.drawable.drx_logo);
                 Intent intent = new Intent(ListActivity.this, DetailActivity.class);
                 ListView listView = (ListView) parent;
                 intent.putExtra("team", adapter.getItem(position));
-                startActivityForResult(intent, 200);
+                startActivityForResult(intent, 200); // navigate to DetailActivity
             }
         });
     }

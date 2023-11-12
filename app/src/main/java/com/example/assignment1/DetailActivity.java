@@ -17,6 +17,8 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
+        // receive intent from previous activity (team)
+
         Intent intent = getIntent();
         team = (Team) intent.getSerializableExtra("team");
 
@@ -29,6 +31,8 @@ public class DetailActivity extends AppCompatActivity {
         TextView mid = (TextView) findViewById(R.id.midPlayer);
         TextView adc = (TextView) findViewById(R.id.adcPlayer);
         TextView sup = (TextView) findViewById(R.id.supPlayer);
+
+        // set all the required materials
 
         smallLogo.setImageResource(team.getLogo());
         teamName.setText(team.getName());
