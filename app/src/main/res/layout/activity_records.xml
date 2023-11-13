@@ -54,13 +54,12 @@
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="T1"
-                android:textColor="#000000"
-                android:textSize="24sp" />
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="25dp"
+                android:layout_height="40dp"
+                android:src="@drawable/t1_logo" />
+
         </TableRow>
 
         <TableRow android:id="@+id/best_game_record">
@@ -74,13 +73,11 @@
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Gen.G"
-                android:textColor="#000000"
-                android:textSize="24sp" />
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/geng_logo" />
         </TableRow>
 
         <TableRow android:id="@+id/best_match_record">
@@ -94,13 +91,11 @@
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="T1"
-                android:textColor="#000000"
-                android:textSize="24sp" />
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="25dp"
+                android:layout_height="40dp"
+                android:src="@drawable/t1_logo" />
         </TableRow>
 
         <TableRow android:id="@+id/worst_record">
@@ -114,13 +109,11 @@
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Brion"
-                android:textColor="#000000"
-                android:textSize="24sp" />
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/brion_logo" />
         </TableRow>
 
         <TableRow android:id="@+id/longest_win_streak">
@@ -134,13 +127,11 @@
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="T1"
-                android:textColor="#000000"
-                android:textSize="24sp" />
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="25dp"
+                android:layout_height="40dp"
+                android:src="@drawable/t1_logo" />
         </TableRow>
 
         <TableRow android:id="@+id/longest_lose_streak">
@@ -154,13 +145,11 @@
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Brion"
-                android:textColor="#000000"
-                android:textSize="24sp" />
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/brion_logo" />
         </TableRow>
     </TableLayout>
 

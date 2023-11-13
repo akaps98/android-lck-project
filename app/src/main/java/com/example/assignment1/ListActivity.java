@@ -1,5 +1,6 @@
 package com.example.assignment1;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.assignment1.model.ListTeamAdapter;
 import com.example.assignment1.model.Team;
@@ -124,8 +126,23 @@ public class ListActivity extends AppCompatActivity {
                 Intent intent = new Intent(ListActivity.this, DetailActivity.class);
                 ListView listView = (ListView) parent;
                 intent.putExtra("team", adapter.getItem(position));
-                startActivityForResult(intent, 200); // navigate to DetailActivity
+                startActivityForResult(intent, 100); // navigate to DetailActivity
             }
         });
+
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 100) {
+            if(resultCode == RESULT_OK) {
+                String teamTitle = data.getStringExtra("teamTitle");
+                Toast.makeText(ListActivity.this, "You have seen " + teamTitle + "!", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(ListActivity.this, "Wrong request", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 }

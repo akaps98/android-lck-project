@@ -43,5 +43,11 @@ public class DetailActivity extends AppCompatActivity {
         mid.append(team.getPlayers().get("mid"));
         adc.append(team.getPlayers().get("adc"));
         sup.append(team.getPlayers().get("sup"));
+
+        Intent teamTitle = new Intent();
+        teamTitle.putExtra("teamTitle", team.getName());
+
+        setResult(RESULT_OK, teamTitle);
+        //finish();
     }
 }
