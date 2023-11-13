@@ -9,14 +9,14 @@
     tools:context=".ListActivity">
 
     <TextView
-        android:id="@+id/team_select"
+        android:id="@+id/list_title"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:text="LCK Teams"
         android:textStyle="bold"
         android:textColor="#000000"
         android:textAlignment="center"
-        android:textSize="26sp" />
+        android:textSize="28sp" />
 
     <ListView
         android:id="@+id/listView"

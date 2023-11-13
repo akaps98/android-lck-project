@@ -14,13 +14,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button go_button = (Button) findViewById(R.id.go_button);
+        Button teams_button = (Button) findViewById(R.id.teams_button);
+        Button records_button = (Button) findViewById(R.id.records_button);
 
-        go_button.setOnClickListener(new View.OnClickListener() {
+        teams_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), ListActivity.class);
                 startActivity(intent); // click to navigate ListActivity
+            }
+        });
+
+        records_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), RecordsActivity.class);
+                startActivity(intent); // click to navigate RecordsActivity
             }
         });
     }
