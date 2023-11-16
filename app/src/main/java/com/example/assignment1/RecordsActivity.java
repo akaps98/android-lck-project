@@ -16,6 +16,7 @@ public class RecordsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_records);
 
+        // find each table row
         TableRow most_champion = (TableRow) findViewById(R.id.most_champion);
         TableRow best_game_record = (TableRow) findViewById(R.id.best_game_record);
         TableRow best_match_record = (TableRow) findViewById(R.id.best_match_record);
@@ -23,6 +24,7 @@ public class RecordsActivity extends AppCompatActivity {
         TableRow longest_win_streak = (TableRow) findViewById(R.id.longest_win_streak);
         TableRow longest_lose_streak = (TableRow) findViewById(R.id.longest_lose_streak);
 
+        // show proper dialog on each table row
         most_champion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

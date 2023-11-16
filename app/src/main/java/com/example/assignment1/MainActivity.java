@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // find buttons
         Button teams_button = (Button) findViewById(R.id.teams_button);
         Button records_button = (Button) findViewById(R.id.records_button);
 
